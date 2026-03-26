@@ -1,0 +1,108 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 72px 8vw 64px;
+  background:
+    linear-gradient(120deg, rgba(245, 124, 31, 0.2), transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, #111923 0%, #182330 48%, #10151c 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 24px solid rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 12px rgba(245, 124, 31, 0.22);
+}
+
+.hero h2 {
+  max-width: 760px;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero p {
+  max-width: 600px;
+  color: var(--ow-text-soft);
+  font-size: 1.05rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-matchs {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f57c1f, #ff9c38);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 16px 28px rgba(245, 124, 31, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-matchs:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 32px rgba(245, 124, 31, 0.3);
+}
+
+.matchs {
+  padding: 44px 20px 60px;
+}
+
+.matchs h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  max-width: 860px;
+  margin: 0 auto 16px;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 5px solid var(--ow-orange);
+  border-radius: 18px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.match p:last-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    align-items: center;
+    text-align: center;
+    padding-inline: 20px;
+  }
+
+  .match {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

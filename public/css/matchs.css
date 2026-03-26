@@ -1,0 +1,312 @@
+.matchs-container {
+  flex: 1;
+  width: min(1120px, calc(100% - 40px));
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 36px 20px 56px;
+  margin: 0 auto;
+}
+
+.section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
+  position: relative;
+  overflow: visible;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ow-orange), var(--ow-blue));
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 22px;
+  color: var(--ow-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section > p {
+  color: var(--ow-text-soft);
+  text-align: center;
+}
+
+.match-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(11, 15, 20, 0.66);
+  color: var(--ow-text);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 5px solid rgba(245, 124, 31, 0.75);
+  border-radius: 18px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 124, 31, 0.3);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+.match-card p {
+  margin-bottom: 8px;
+}
+
+.match-card form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.match-card label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.match-card input,
+.match-card select,
+.match-card button,
+.section input,
+.section select,
+.section button {
+  font: inherit;
+}
+
+.match-card input[type="radio"] {
+  accent-color: var(--ow-orange);
+}
+
+.live,
+.date {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.live {
+  background: rgba(245, 124, 31, 0.18);
+  color: var(--ow-orange-light);
+  border: 1px solid rgba(245, 124, 31, 0.35);
+}
+
+.date {
+  background: rgba(78, 183, 255, 0.12);
+  color: #b8e2ff;
+  border: 1px solid rgba(78, 183, 255, 0.26);
+}
+
+.bet-points {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.bet-points-win {
+  background: rgba(46, 204, 113, 0.16);
+  color: #6ef0a7;
+}
+
+.bet-points-loss {
+  background: rgba(255, 99, 99, 0.16);
+  color: #ff8e8e;
+}
+
+.btn-parier,
+.section button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f57c1f, #ff9c38);
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-parier:hover,
+.section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(245, 124, 31, 0.26);
+}
+
+.section input,
+.section select {
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(11, 15, 20, 0.82);
+  color: var(--ow-text);
+  color-scheme: dark;
+}
+
+.section input:focus,
+.section select:focus {
+  outline: none;
+  border-color: rgba(245, 124, 31, 0.65);
+  box-shadow: 0 0 0 4px rgba(245, 124, 31, 0.12);
+}
+
+.section input[type="datetime-local"] {
+  min-height: 48px;
+}
+
+.section input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 260px;
+}
+
+.admin-section {
+  overflow: visible;
+  margin-bottom: 32px;
+}
+
+.admin-form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.admin-nav a {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--ow-text);
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.admin-nav a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(245, 124, 31, 0.45);
+  background: rgba(245, 124, 31, 0.12);
+}
+
+.admin-subtitle {
+  margin: 22px 0 14px;
+  font-size: 1.15rem;
+  color: var(--ow-orange-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  scroll-margin-top: 110px;
+}
+
+.admin-form input,
+.admin-form button {
+  width: 100%;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -8px 0 24px;
+}
+
+.admin-inline-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-inline-delete {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 99, 99, 0.18);
+  color: #ffb3b3;
+  cursor: pointer;
+}
+
+.admin-match-card {
+  align-items: flex-start;
+}
+
+.admin-actions-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ow-orange-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-actions label {
+  font-size: 0.85rem;
+  color: var(--ow-text-soft);
+}
+
+.admin-closed-message {
+  margin: 0;
+  color: var(--ow-text-soft);
+  font-style: italic;
+}
+
+@media (max-width: 860px) {
+  .match-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .match-card form {
+    width: 100%;
+  }
+
+  .admin-actions {
+    min-width: 100%;
+    width: 100%;
+  }
+}
